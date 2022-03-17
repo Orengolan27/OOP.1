@@ -13,7 +13,7 @@ Store::Store(string newStoreName,int newComputersNumber) :
 		name = newStoreName;
 	}
 }
-// --------------name get/set methods--------------//
+// --------------name get/set methods--------------test//
 string Store::getName()const
 {
 	return name;

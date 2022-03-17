@@ -13,7 +13,7 @@ using std::endl;
 int main()
 {
 
-	freopen("myOutput.txt", "w", stdout); // saving the output to a file named "myOutput.txt" in the project directory;
+	//freopen("myOutput.txt", "w", stdout); // saving the output to a file named "myOutput.txt" in the project directory;
 
 	Cpu cpu1;
 	cpu1.setClockRate(2.4);
@@ -46,7 +46,6 @@ int main()
 	store.addComputer(computer1);
 	store.addComputer(computer2);
 	store.printComputersByYear();
-
 
 	return 0;
 }

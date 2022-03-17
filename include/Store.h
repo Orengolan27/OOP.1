@@ -5,9 +5,9 @@
 
 class Store
 {
-	string storeName;
+	string name;
 	Computer computers[MAX_COMPUTERS_NUMBER];
-	int computersNumber;
+	int number;
 
 public:
 	Store(string newStoreName = "~",int newComputersNumber = 0);
@@ -15,10 +15,13 @@ public:
 
 	//class gets//
 	string getName()const;
-	int getComputersNumber()const;
+	int getNumber()const;
+    Computer* getComputers();
 
 	//class sets//
-	void setStoreName(const string& newStoreName);
+	void setName(const string& newStoreName);
+    void setNumber(const int newNumber);
+    void setComputers(const Computer*& newComputers);
 	void addComputer(const Computer& Computer);
 
 	//print//

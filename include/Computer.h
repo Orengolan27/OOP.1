@@ -12,23 +12,23 @@ class Computer
 	Cpu comCpu;
 
 public:
-	Computer(Cpu newcpu = (0, "~", 0), string newManufactorerName = "~", int newYearOfManufactore = 0, string newColor = "~", bool newLaptop = false);
+	Computer(Cpu newCpu = (0, "~", 0), string newManufacturerName = "~", int newYearOfManufacture = 0, string newColor = "~", bool newLaptop = false);
 	~Computer() = default;
-	//class gets//
-	string getManufactorer()const;
+	//--------------class gets--------------//
+	string getManufacturer()const;
 	string getColor()const;
 	int getYear()const;
 	bool getIsLaptop()const;
 	Cpu getCpu()const;
 
-	//class sets//
-	void setManufacturer(const string& newManufactorerName);
+	//--------------class sets--------------//
+	void setManufacturer(const string& newManufacturerName);
 	void setColor(const string& newColor);
 	void setYear(const int& newYear);
-	void setIsLaptop(const bool newlap);
+	void setIsLaptop(const bool newLaptop);
 	void setCpu(const Cpu& newCpu);
 
-	//print//
+	//--------------print--------------//
 	void print()const;
 
 

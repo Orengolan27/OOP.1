@@ -7,7 +7,7 @@ using std::endl;
 
 class Cpu
 {
-    //private://
+    //--------------private--------------//
 	double clockRate;
 	int year;
 	string manufacturer;
@@ -15,10 +15,10 @@ class Cpu
 public:
 	Cpu(double newClock = 0,string newName = "~", int newYear = 0);
 	~Cpu() = default;
-	//class gets//
+	//--------------class gets--------------//
 	double getClockRate()const;
 	int getYear()const;
-	string getManufacturerName()const;
+	string getManufacturer()const;
 
 	//class sets//
 	void setClockRate(const double& newClockRate);

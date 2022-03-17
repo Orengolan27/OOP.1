@@ -4,15 +4,15 @@
 using std::cout;
 using std::endl;
 
-Computer::Computer(Cpu newCpu , string newManufactorerName, int newYearOfManufactore, string newColor, bool newLaptop) : comCpu(newCpu),year(newYearOfManufactore) , isLaptop(newLaptop)
+Computer::Computer(Cpu newCpu , string newManufacturerName, int newYearOfManufacture, string newColor, bool newLaptop) : comCpu(newCpu),year(newYearOfManufacture) , isLaptop(newLaptop)
 {
-//checking size//
-	if (newManufactorerName.length() > 10) {
+//--------------checking size--------------//
+	if (newManufacturerName.length() > 10) {
 		cout << "manufacturer length is too long" << endl;
         manufacturer = "~";
 	}
 	else {
-        manufacturer = newManufactorerName;
+        manufacturer = newManufacturerName;
 	}
 	if (newColor.length() > 10) {
 		cout << "color length is too long" << endl;
@@ -24,18 +24,18 @@ Computer::Computer(Cpu newCpu , string newManufactorerName, int newYearOfManufac
 
 }
 // --------------Manufacturer get/set methods--------------//
-string Computer::getManufactorer()const
+string Computer::getManufacturer()const
 {
 	return manufacturer;
 }
-void Computer::setManufacturer(const string& newManufactorerName)
+void Computer::setManufacturer(const string& newManufacturerName)
 {
-	if (newManufactorerName.length() > 10) {
+	if (newManufacturerName.length() > 10) {
 		cout << "manufacturer length is too long" << endl;
         manufacturer = "~";
 	}
 	else {
-        manufacturer = newManufactorerName;
+        manufacturer = newManufacturerName;
 	}
 }
 // --------------color get/set methods--------------//
@@ -69,9 +69,9 @@ bool Computer::getIsLaptop()const
 {
 	return isLaptop;
 }
-void Computer::setIsLaptop(const bool newlap)
+void Computer::setIsLaptop(const bool newLaptop)
 {
-	isLaptop = newlap;
+	isLaptop = newLaptop;
 }
 // --------------cpu get/set methods--------------//
 Cpu Computer::getCpu()const
@@ -87,7 +87,7 @@ void Computer::print()const
 {
 	{
 		cout << "Cpu clockRate: " << comCpu.getClockRate() << endl;
-		cout << "Cpu manufacturer: " << comCpu.getManufacturerName() << endl;
+		cout << "Cpu manufacturer: " << comCpu.getManufacturer() << endl;
 		cout << "Cpu year: " << comCpu.getYear() << endl;
 		cout << "Computer manufacturer: " << manufacturer << endl;
 		cout << "Computer year: " << year << endl;

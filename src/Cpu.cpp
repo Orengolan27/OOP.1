@@ -29,8 +29,8 @@ void Cpu::setYear(const int& newYearOfManufacturing)
 {
 	year = newYearOfManufacturing;
 }
-//--------------ManufacturerName get/set methods--------------//
-string Cpu::getManufacturerName()const
+//--------------Manufacturer get/set methods--------------//
+string Cpu::getManufacturer()const
 {
 	return manufacturer;
 }
@@ -51,7 +51,7 @@ void Cpu::setManufacturer(const string& newManufacturerName)
 void Cpu::print()const
 {
 	cout << "Cpu clockRate: " << clockRate<< endl;
-	cout << "Cpu manufacturer: " <<manufacturer << endl;
+	cout << "Cpu manufacturer: " << manufacturer << endl;
 	cout << "Cpu year: " << year << endl;
 
 }

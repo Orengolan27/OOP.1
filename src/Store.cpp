@@ -3,70 +3,86 @@
 #include "Cpu.h"
 
 Store::Store(string newStoreName,int newComputersNumber) :
-	computersNumber(newComputersNumber)
+	number(newComputersNumber)
 {
 	if (newStoreName.length() > 10) {
 		cout << "Store's name length is too long" << endl;
-		storeName = "~";
+		name = "~";
 	}
 	else {
-		storeName = newStoreName;
+		name = newStoreName;
 	}
 }
 // --------------name get/set methods--------------//
 string Store::getName()const
 {
-	return storeName;
+	return name;
 }
-void Store::setStoreName(const string& newStoreName)
+void Store::setName(const string& newStoreName)
 {
 	if (newStoreName.length() > 10) {
 		cout << "Store's name length is too long" << endl;
-		storeName = "~";
+		name = "~";
 	}
 	else {
-		storeName = newStoreName;
+		name = newStoreName;
 	}
 }
-// --------------computer number get method--------------//
-int Store::getComputersNumber()const
+// --------------computer number get/set method--------------//
+int Store::getNumber()const
 {
-	return computersNumber;
+	return number;
+}
+void Store::setNumber(const int newNumber)
+{
+    number=newNumber;
+}
+// --------------computer get/set method--------------//
+Computer *Store::getComputers()
+{
+    return this->computers;
+}
+void Store::setComputers(const Computer *&newComputers)
+{
+    for(int i=0;i<MAX_COMPUTERS_NUMBER;i++)
+    {
+        computers[i]=newComputers[i];
+    }
 }
 // --------------add computer method--------------//
 void Store::addComputer(const Computer& Computer)
 {
-	if (computersNumber >= MAX_COMPUTERS_NUMBER)
+	if (number >= MAX_COMPUTERS_NUMBER)
 	{
 		cout << "The store is full!" << endl;
 	}
 	else
 	{
-		computers[computersNumber] = Computer;
-		computersNumber++;
+		computers[number] = Computer;
+		number++;
 	}
 }
 // --------------print methods--------------//
 void Store::printComputersByName()
 {
-	cout << "There are " << computersNumber << "computers in the store. The computers:" << endl;
+	cout << "There are " << number << " computers in the store. The computers:" << endl;
 	int i, j;
 	Computer tempstore[MAX_COMPUTERS_NUMBER];
-	for (i = 0; i < computersNumber; i++)
+	for (i = 0; i < number; i++)
 	{
 		tempstore[i] = computers[i];
 	}
 
 	Computer temp1, temp2;
 	string string1, string2;
-	for (i = computersNumber - 1; i >= 0; i--)
+	for (i = number - 1; i >= 0; i--)
 	{
-		for (j = 0; j < computersNumber - 1; j++)
+		for (j = 0; j < number - 1; j++)
 		{
 			temp1 = tempstore[j];
 			temp2 = tempstore[j + 1];
-			string1 = temp1.getManufactorer();
-			string2 = temp2.getManufactorer();
+			string1 = temp1.getManufacturer();
+			string2 = temp2.getManufacturer();
 			if (string1.compare(string2) > 0)
 			{
 				tempstore[j + 1] = temp1;
@@ -75,7 +91,7 @@ void Store::printComputersByName()
 
 		}
 	}
-	for (i = 0; i < computersNumber; i++)
+	for (i = 0; i < number; i++)
 	{
         cout<<"Computer "<<i+1<<endl;
 		tempstore[i].print();
@@ -86,17 +102,17 @@ void Store::printComputersByName()
 
 void Store::printComputersByYear()
 {
-	cout << "There are " << computersNumber << " computers in the store. The computers:" << endl;
+	cout << "There are " << number << " computers in the store. The computers:" << endl;
 	int i, j;
 	Computer tempstore[MAX_COMPUTERS_NUMBER];
-	for (i = 0; i < computersNumber; i++)
+	for (i = 0; i < number; i++)
 	{
 		tempstore[i] = computers[i];
 	}
 	Computer temp1, temp2;
-	for (i = computersNumber - 1; i >= 0; i--)
+	for (i = number - 1; i >= 0; i--)
 	{
-		for (j = 0; j < computersNumber - 1; j++)
+		for (j = 0; j < number - 1; j++)
 		{
 			temp1 = tempstore[j];
 			temp2 = tempstore[j + 1];
@@ -107,12 +123,14 @@ void Store::printComputersByYear()
 			}
 		}
 	}
-	for (i = 0; i < computersNumber; i++)
+	for (i = 0; i < number; i++)
 	{
         cout<<"Computer "<<i+1<<endl;
 		tempstore[i].print();
 		cout << endl;
 	}
 }
+
+
 
 

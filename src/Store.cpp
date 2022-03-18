@@ -4,10 +4,12 @@
 #include "Computer.h"
 #include "Cpu.h"
 
-/**Constructor for Store type :
+/**
+ Constructor for Store type :
  * Order of initialization list -
  * 1. Store name (string)
- * 2. Number of computers in the store (int) **/
+ * 2. Number of computers in the store (int)
+ **/
 
 Store::Store(string newStoreName,int newComputersNumber) :
 	number(newComputersNumber)

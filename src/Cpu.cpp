@@ -4,11 +4,13 @@
 using std::cout;
 using std::endl;
 
-/**Constructor for Cpu type :
+/**
+ Constructor for Cpu type :
  * Order of initialization list -
  * 1. Clockrate speed in GHz (double)
  * 2. The name of the manufacturer (string)
- * 3. Year of manufacturing (int)*/
+ * 3. Year of manufacturing (int)
+ */
 
 Cpu::Cpu(double newClock,string newName, int newYear) : clockRate(newClock), year(newYear) {
 	if (newName.length() > 10) {

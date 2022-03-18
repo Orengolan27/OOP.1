@@ -7,13 +7,15 @@ using std::cout;
 using std::endl;
 
 
-/**Constructor for Computer type :
- * Order of initialization list -
+/**
+ Constructor for Computer type :
+ Order of initialization list -
  * 1. Cpu (Cpu type)
  * 2. The name of the manufacturer (string)
  * 3. Year of manufacturing (int)
  * 4. Computer color (string)
- * 5. If the computer is Laptop of not (boolean) */
+ * 5. If the computer is Laptop of not (boolean)
+ **/
 
 Computer::Computer(Cpu newCpu , string newManufacturerName, int newYearOfManufacture, string newColor, bool newLaptop) : comCpu(newCpu),year(newYearOfManufacture) , isLaptop(newLaptop)
 {

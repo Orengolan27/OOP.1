@@ -1,3 +1,5 @@
+// Oren Golan 318186517//
+// Matan Polik 207419300//
 #pragma once
 #define MAX_COMPUTERS_NUMBER 10
 #include "Computer.h"

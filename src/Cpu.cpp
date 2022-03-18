@@ -1,6 +1,14 @@
+// Oren Golan 318186517//
+// Matan Polik 207419300//
 #include "Cpu.h"
 using std::cout;
 using std::endl;
+
+/**Constructor for Cpu type :
+ * Order of initialization list -
+ * 1. Clockrate speed in GHz (double)
+ * 2. The name of the manufacturer (string)
+ * 3. Year of manufacturing (int)*/
 
 Cpu::Cpu(double newClock,string newName, int newYear) : clockRate(newClock), year(newYear) {
 	if (newName.length() > 10) {
@@ -11,6 +19,7 @@ Cpu::Cpu(double newClock,string newName, int newYear) : clockRate(newClock), yea
         manufacturer = newName;
 	}
 }
+
 //--------------ClockRate get/set methods--------------//
 double Cpu::getClockRate()const
 {
@@ -20,7 +29,8 @@ void Cpu::setClockRate(const double& newClockRate)
 {
 	clockRate = newClockRate;
 }
-//--------------year get/set methods--------------//
+
+//--------------Year get/set methods--------------//
 int Cpu::getYear()const
 {
 	return year;
@@ -29,6 +39,7 @@ void Cpu::setYear(const int& newYearOfManufacturing)
 {
 	year = newYearOfManufacturing;
 }
+
 //--------------Manufacturer get/set methods--------------//
 string Cpu::getManufacturer()const
 {
@@ -47,7 +58,8 @@ void Cpu::setManufacturer(const string& newManufacturerName)
 
 	}
 }
-//--------------print method--------------//
+
+//--------------Print method--------------//
 void Cpu::print()const
 {
 	cout << "Cpu clockRate: " << clockRate<< endl;

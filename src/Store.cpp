@@ -98,7 +98,7 @@ void Store::printComputersByName() // printing all computers in the store, by th
 			temp2 = tempstore[j + 1];
 			string1 = temp1.getManufacturer();
 			string2 = temp2.getManufacturer();
-			if (string1.compare(string2) > 0)
+			if (string1.compare(string2) > 0) //swap between the strings//
 			{
 				tempstore[j + 1] = temp1;
 				tempstore[j] = temp2;
@@ -106,7 +106,7 @@ void Store::printComputersByName() // printing all computers in the store, by th
 
 		}
 	}
-	for (i = 0; i < number; i++)
+	for (i = 0; i < number; i++) //print//
 	{
         cout<<"Computer "<<i+1<<endl;
 		tempstore[i].print();
@@ -131,14 +131,14 @@ void Store::printComputersByYear() // printing all computers in the store, by th
 		{
 			temp1 = tempstore[j];
 			temp2 = tempstore[j + 1];
-			if (temp1.getYear() > temp2.getYear())
+			if (temp1.getYear() > temp2.getYear()) //swap between the strings//
 			{
 				tempstore[j + 1] = temp1;
 				tempstore[j] = temp2;
 			}
 		}
 	}
-	for (i = 0; i < number; i++)
+	for (i = 0; i < number; i++) //print//
 	{
         cout<<"Computer "<<i+1<<endl;
 		tempstore[i].print();

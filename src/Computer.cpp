@@ -62,7 +62,7 @@ string Computer::getColor()const
 }
 void Computer::setColor(const string& newColor)
 {
-	if (newColor.length() <= 10)
+	if (newColor.length() <= 10) //checking size//
 	{
 		comColor = newColor;
 	}

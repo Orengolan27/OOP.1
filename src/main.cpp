@@ -15,7 +15,7 @@ using std::endl;
 int main()
 {
 
-	//freopen("myOutput.txt", "w", stdout); // saving the output to a file named "myOutput.txt" in the project directory;
+	freopen("myOutput.txt", "w", stdout); // saving the output to a file named "myOutput.txt" in the project directory;
 
 	Cpu cpu1;
 	cpu1.setClockRate(2.4);

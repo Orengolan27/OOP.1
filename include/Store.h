@@ -7,26 +7,29 @@
 
 class Store
 {
-	string name;
+    //--------------private--------------//
+    string name;
 	Computer computers[MAX_COMPUTERS_NUMBER];
 	int number;
 
 public:
-	Store(string newStoreName = "~",int newComputersNumber = 0);
+
+    //--------------Constructor & Destructor--------------//
+    Store(string newStoreName = "~",int newComputersNumber = 0);
 	~Store() = default;
 
-	//class gets//
+	//---------------Getters---------------//
 	string getName()const;
 	int getNumber()const;
     Computer* getComputers();
 
-	//class sets//
+	//-----------------Setters---------------//
 	void setName(const string& newStoreName);
     void setNumber(const int newNumber);
     void setComputers(const Computer*& newComputers);
 	void addComputer(const Computer& Computer);
 
-	//print//
+	//------------------print function------------//
 	void printComputersByName();
 	void printComputersByYear();
 

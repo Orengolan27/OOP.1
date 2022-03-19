@@ -15,18 +15,22 @@ class Cpu
 	string manufacturer;
 
 public:
-	Cpu(double newClock = 0,string newName = "~", int newYear = 0);
+
+    //--------------Constructor & Destructor--------------//
+    Cpu(double newClock = 0,string newName = "~", int newYear = 0);
 	~Cpu() = default;
-	//--------------class gets--------------//
+
+	//--------------Getters--------------//
 	double getClockRate()const;
 	int getYear()const;
 	string getManufacturer()const;
 
-	//class sets//
+	//---------------Setters----------------//
 	void setClockRate(const double& newClockRate);
 	void setYear(const int& newYearOfManufacturing);
 	void setManufacturer(const string& newManufacturerName);
-	//print func//
+
+    //-------------print function------------//
 	void print()const;
 
 };

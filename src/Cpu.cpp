@@ -13,7 +13,7 @@ using std::endl;
  */
 
 Cpu::Cpu(double newClock,string newName, int newYear) : clockRate(newClock), year(newYear) {
-	if (newName.length() > 10) {
+	if (newName.length() > 10)  {
 		cout << "manufacturer length is too long" << endl;
         manufacturer = "~";
 	}
@@ -49,7 +49,7 @@ string Cpu::getManufacturer()const
 }
 void Cpu::setManufacturer(const string& newManufacturerName)
 {
-	if (newManufacturerName.length() <= 10)
+	if (newManufacturerName.length() <= 10) //checking size//
 	{
         manufacturer = newManufacturerName;
 	}
